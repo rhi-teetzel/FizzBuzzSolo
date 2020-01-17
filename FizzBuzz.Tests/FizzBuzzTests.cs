@@ -26,15 +26,45 @@ namespace FizzBuzz.Tests
         }
 
         [Fact]
-
         public void Get_Returns_Fizz_for_3()
+        {
+            var fizzBuzz = new FizzBuzz();
+
+            var result = fizzBuzz.Get(3);
+
+            Assert.Equal("Fizz", result);
+        }
+
+        [Fact]
+        public void Get_Returns_Fizz_for_6()
         {
             var fizzBuzz = new FizzBuzz();
 
             var result = fizzBuzz.Get(6);
 
             Assert.Equal("Fizz", result);
-
         }
+
+        [Fact]
+        public void Get_Returns_Buzz_for_5()
+        {
+            var fizzBuzz = new FizzBuzz();  //Arrange - Get ready
+
+            var result = fizzBuzz.Get(5);  //Act - Do the thing you're testing
+
+            Assert.Equal("Buzz", result);  //Assert - Make sure it worked
+        }
+
+        [Fact]
+        public void Get_Returns_Buzz_for_10()
+        {
+            var fizzBuzz = new FizzBuzz();
+
+            var result = fizzBuzz.Get(10);
+
+            Assert.Equal("Buzz", result);
+        }
+            
+
     }
 }
